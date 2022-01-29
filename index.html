@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="container">
+       <nav class="navbar">
+           <h1 class="main-title">Budget</h1>
+           <div class="nav-btn-container">
+               <button class="btn add-budget primary-btn">Add Budget</button>
+               <button class="btn add-expense secondary-btn">Add Expense</button>
+           </div>
+       </nav>
+       <div class="modal-container">
+            <div class="modal add-budget-modal">
+                <div class="modal-header">
+                    <h1 class="modal-title">Add New Budget</h1>
+                    <span class="btn close-modal ternary-btn">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <form class="add-budget-form">
+                        <label for="budget-name">Name</label>
+                        <input 
+                                class="input budget-name-input" 
+                                type="text" 
+                                required>
+                        <label for="budget-max">Max</label>
+                        <input 
+                                class="input budget-max-input" 
+                                type="number" 
+                                required>
+                        <button 
+                                type="submit" 
+                                class="btn submit-modal-btn primary-btn"
+                                >save</button>
+                    </form>
+                </div>
+           </div>
+       </div>
+       
+       <div class="modal-container">
+            <div class="modal add-expense-modal">
+                <div class="modal-header">
+                    <h1 class="modal-title">Add New Expense</h1>
+                    <span class="btn close-modal ternary-btn">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <form class="add-expense-form">
+                        <label for="expense-desc">Description</label>
+                        <input 
+                                class="input expense-desc-input" 
+                                type="text" 
+                                >
+                        <label for="expense-amount">Amount</label>
+                        <input 
+                                class="input expense-amount-input" 
+                                type="number" 
+                                required>
+                        <select name="expense-alocation" class="input expense-alocation">
+                          
+                        </select>
+                        <button type="submit" class="btn submit-modal-btn primary-btn">Save</button>
+                    </form>
+                </div>
+           </div>
+       </div>
+       
+       <div class="modal-container">
+            <div class="modal view-expense-modal">
+                <div class="modal-header">
+                    <h1 class="modal-title">view Expense</h1>
+                    <span class="btn close-modal ternary-btn">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <ul class="view-expense-list">
+                      
+                    </ul>
+                    <button class="btn add-expense primary-btn">Add Expense</button>
+                </div>
+           </div>
+       </div>
+
+       <div class="modal-container">
+           <div class="modal error-msg-modal">
+               <div class="modal-header">
+                   <h1 class="modal-title">Error</h1>
+               </div>
+               <div class="modal-body">
+                <p class="expense-list">please make a budget first</p>
+               </div>
+               <button class="btn close-modal primary-btn">close</button>
+           </div>
+       </div>
+
+       <section class="main-section">
+          
+       </section>
+   </div>
+
+    <script src="App.js"></script>
+</body>
+</html>

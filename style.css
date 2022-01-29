@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    background-color: rgba(243, 243, 243, 0.514);
+}
+.btn{
+    position: relative;
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn:active{
+    top: 2px;
+}
+.primary-btn{
+    background-color: rgb(122, 102, 250);
+    color: #fff;
+}
+.primary-btn:hover{
+    background-color: rgba(122, 102, 250, 0.788);
+}
+.secondary-btn{
+    background-color: rgba(255, 255, 255, 0.384);
+    border: 2px solid rgba(95, 93, 93, 0.274);
+    color: rgba(95, 93, 93, 0.63);
+}
+.secondary-btn:hover{
+    background-color: rgba(214, 214, 214, 0.178);
+    border: 2px solid rgba(95, 93, 93, 0.274);
+}
+.ternary-btn{
+    border: 2px solid crimson;
+    background-color: #fff;
+    max-height: 50px;
+}
+ul{
+    list-style: none;
+}
+input[type=number] {
+    -moz-appearance:textfield;
+}
+  
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance:textfield;
+    margin: 0; 
+}
+
+  
+.container{
+    margin: 57px 50px;
+}
+.modal-container{
+    background-color: rgba(53, 52, 52, 0.267);
+    z-index: 101;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    display: none;
+    left: 0;
+    overflow: auto;
+}
+.modal-container .modal{
+    position: relative;
+    background-color: #fff;
+    width: 80vw;
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 57px auto;
+    animation: animatetop .4s;
+}
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 20px;
+}
+.modal-body form{
+    display: flex;
+    flex-direction: column;
+}
+.modal-body .input{
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 1.25em;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgb(243, 243, 243);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 10px 50px;
+}
+.main-section{
+    margin-top: 102px;
+}
+.budget-card{
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #fff;
+}
+.budget-card-header{
+    display: flex;
+    justify-content: space-between;
+}
+.budget-card-body{
+    display: flex;
+    margin: 20px 0;
+}
+.progress-bar-container{
+    border: 1px solid rgba(95, 93, 93, 0.274);
+    width: 100%;
+    border-radius: 13px;
+    height: 25px;
+    overflow: hidden;
+}
+.progress{
+    position: relative;
+    background-color: rgb(122, 102, 250);
+    height: 100%;
+    width: 0;
+    transition: .5s;
+}
+.expense-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+.expense-desc{
+    margin-right: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.expense-name{
+ overflow: hidden;
+ max-width: 300px;
+}
+.budget-card-footer{
+    display: flex;   
+}
+.budget-card-footer .btn{
+    margin-right: 10px;
+}
+
+@media(max-width: 768px) {
+    .navbar{
+        align-items: center;
+        flex-direction: column;
+    }
+    .navbar .add-expense{
+        display: none;
+    }
+    .navbar .add-budget{
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+    }
+    .view-expense-modal .add-expense{
+        width: 100%;
+    }
+}
+
+
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
